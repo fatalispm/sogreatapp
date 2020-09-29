@@ -7,6 +7,7 @@ export async function getBookings(): Promise<{data: {results: Array<Booking>}}> 
     return axios.get(`${API_URL}/api/v1/bookings/`);
 }
 
-export async function flipRoom(n: Number, data: Object): Promise<Object> {
+export async function flipRoom(n: number, data: {balance: number}): Promise<null> {
     return axios.patch(`${API_URL}/api/v1/bookings/${n}/`, data);
 }
+

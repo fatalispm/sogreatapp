@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function (props: { address: String }) {
+export default function (props: { address: string }) {
     const styles = useStyles();
 
     return <div className={styles.container}>

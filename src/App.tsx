@@ -13,17 +13,17 @@ const useStyles = makeStyles({
 });
 
 interface Room {
-    location: String;
+    location: string;
     number: number;
-    address: String;
+    address: string;
 }
 
 export interface Booking {
     id: number;
-    user: String;
+    user: string;
     uid: number;
     balance: string;
-    move_out_date: String;
+    move_out_date: string;
     room: Room;
 }
 
@@ -38,7 +38,7 @@ function App() {
         });
     }, []);
 
-    function flip(id: Number) {
+    function flip(id: number) {
         const booking = data.filter(b => b.id === id)[0];
         const info = {balance: parseFloat(booking.balance) + 50};
         flipRoom(id, info).then(

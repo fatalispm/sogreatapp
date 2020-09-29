@@ -12,12 +12,12 @@ const useStyles = makeStyles({
 });
 
 
-interface Props {
+interface BookingTableProps {
     data: Array<Booking>,
     flip: (id: number) => void
 }
 
-export default function BasicTable(props: Props) {
+export default function BasicTable(props: BookingTableProps) {
     const classes = useStyles();
 
     return (
